@@ -1,0 +1,13 @@
+[
+    {
+        "model": "runnerapi.park",
+        "pk": 1,
+        "fields": {
+            "name": "Chess",
+            "zipcode": "30044",
+            "county": "Gwinnet",
+            "miles_available_to_run": 5,
+            "difficulty": 5
+        }
+    }
+]
