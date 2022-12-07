@@ -3,11 +3,37 @@
         "model": "runnerapi.park",
         "pk": 1,
         "fields": {
-            "name": "Chess",
-            "zipcode": "30044",
-            "county": "Gwinnet",
+            "name": "Leonora Park",
+            "address": "4515 Lenora Church Rd",
+            "city": "Snellville",
+            "zipcode": "30039",
+            "county": "Gwinnett",
             "miles_available_to_run": 5,
             "difficulty": 5
+        }
+    },{
+        "model": "runnerapi.park",
+        "pk": 1,
+        "fields": {
+            "name": "Yellow River Park",
+            "address": "3232 Juhan Rd SW",
+            "city": "Stone Mountain",
+            "zipcode": "30087",
+            "county": "Gwinnett",
+            "miles_available_to_run": 7,
+            "difficulty": 2
+        }
+    },{
+        "model": "runnerapi.park",
+        "pk": 1,
+        "fields": {
+            "name": "South Gwinnet Park",
+            "address": "2115 Mc Gee Rd SW",
+            "city": "Snellville",
+            "zipcode": "30078",
+            "county": "Gwinnett",
+            "miles_available_to_run": 7,
+            "difficulty": 2
         }
     }
 ]

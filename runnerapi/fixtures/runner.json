@@ -1,0 +1,11 @@
+[
+    {
+        "model": "runnerapi.runner",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "mileage":7.2,
+            "zipcode": "30044"
+        }
+    }
+]

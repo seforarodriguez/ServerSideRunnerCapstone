@@ -1,0 +1,15 @@
+[
+    {
+        "model": "runnerapi.event",
+        "pk": 1,
+        "fields": {
+            "title": "Beginners Run",
+            "park": 1,
+            "date": "2022-12-23",
+            "time": "14:14",
+            "pace_of_run": 11.4,
+            "miles_to_run": 2,
+            "organizer": 1
+        }
+    }
+]
