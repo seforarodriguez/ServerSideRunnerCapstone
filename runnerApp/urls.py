@@ -20,10 +20,11 @@ from rest_framework import routers
 
 from runnerapi.views import login_user
 from runnerapi.views import register_user
-from runnerapi.views import ParkView
+from runnerapi.views import ParkView, RunnerView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'parks', ParkView, 'park')
+router.register(r'runners', RunnerView, 'runner')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
