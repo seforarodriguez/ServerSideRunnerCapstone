@@ -26,21 +26,7 @@ class EventView(ViewSet):
         Returns:
             Response -- JSON serialized list of event types
         """
-        # event_list = []
-
-        # if "park" in request.query_params:
-        #     events_fetched = Event.objects.all()
-        #     parkId_variable = request.query_params['park']
-        #     event_list = events_fetched.filter(park=parkId_variable)
-        #     serializer = EventSerializer(event_list, many=True)
-        # else:
-        #     runner = Runner.objects.get(user=request.auth.user)
-        #     # Set the `joined` property on every event
-        #     for event in event_list:
-        #         # Check to see if the runner is in the attendees list on the event
-        #         event.joined = runner in event.attendees.all()
-
-               
+    
         event_list = Event.objects.all()
 
         serializer = EventSerializer(event_list, many=True)
