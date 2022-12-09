@@ -8,3 +8,4 @@ class Event(models.Model):
     pace_of_run = models.IntegerField()
     miles_to_run = models.IntegerField()
     organizer = models.ForeignKey("Runner", on_delete=models.CASCADE)
+    attendees= models.ManyToManyField("Runner", through="EventAttendee", related_name='events_assisting')

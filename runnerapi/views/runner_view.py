@@ -34,4 +34,4 @@ class RunnerSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Runner
-        fields = ('id','mileage','zipcode')
+        fields = ('id','mileage','zipcode', "runner_full_name")
