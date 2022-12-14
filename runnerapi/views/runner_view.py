@@ -28,7 +28,8 @@ class RunnerView(ViewSet):
         runner = Runner.objects.all()
         serializer = RunnerSerializer(runner, many=True)
         return Response(serializer.data)
- 
+
+    
 class RunnerSerializer(serializers.ModelSerializer):
     """JSON serializer for runner types
     """
