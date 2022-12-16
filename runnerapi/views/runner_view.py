@@ -7,7 +7,7 @@ from runnerapi.models import Runner, Runner
 
 
 class RunnerView(ViewSet):
-    """Level up runner view"""
+    """RunnerApp runner view"""
 
     def retrieve(self, request, pk):
         """Handle GET requests for single runner

@@ -59,7 +59,7 @@ class EventView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        # I AM HERE THIS IS WHERE I LEFT OFF BEFORE LUNCH
+        #
         event = Event.objects.get(pk=pk)
         event.title = request.data["eventTitle"]
         event.date = request.data["dateOfRunEvent"]
@@ -72,10 +72,16 @@ class EventView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
+        runner = Runner.objects.get(user=request.auth.user)
         event = Event.objects.get(pk=pk)
-        event.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
-        
+
+        if runner == event.organizer:
+            event.delete()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        else:
+            return Response(None, status=status.HTTP_401_UNAUTHORIZED)
+
+
     @action(methods=['post'], detail=True)
     def attend(self, request, pk):
         """Post request for a user to sign up for an event"""

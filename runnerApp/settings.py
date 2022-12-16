@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'runnerapi',
 ]
 
+#Authentication backends
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+    )
+
 # THIS IS NEW
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
