@@ -19,6 +19,17 @@ class RunnerView(ViewSet):
         serializer = RunnerSerializer(runner)
         return Response(serializer.data)
 
+    def logged_user(self, request):
+        """Handle GET requests for the current runner
+
+        Returns:
+            Response -- JSON serialized runner
+         """
+
+        current_user = Runner.objects.get(user=request.auth.user)
+        serializer = RunnerSerializer(current_user)
+        return Response(serializer.data)
+
     def list(self, request):
         """Handle GET requests to get all 
 
@@ -35,4 +46,4 @@ class RunnerSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Runner
-        fields = ('id','mileage','zipcode', "runner_full_name")
+        fields = ('id','mileage','zipcode', "runner_full_name", "events_assisting")

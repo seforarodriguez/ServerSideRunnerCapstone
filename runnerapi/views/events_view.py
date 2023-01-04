@@ -84,7 +84,7 @@ class EventView(ViewSet):
 
     @action(methods=['post'], detail=True)
     def attend(self, request, pk):
-        """Post request for a user to sign up for an event"""
+        """Post request for a user to attend an event"""
     
         runner = Runner.objects.get(user=request.auth.user)
         event = Event.objects.get(pk=pk)
@@ -93,7 +93,7 @@ class EventView(ViewSet):
     
     @action(methods=['DELETE'], detail=True)
     def unattend(self, request, pk):
-        """Post request for a user to sign up for an event"""
+        """Post request for a user to un-attend an event"""
     
         runner = Runner.objects.get(user=request.auth.user)
         event = Event.objects.get(pk=pk)
