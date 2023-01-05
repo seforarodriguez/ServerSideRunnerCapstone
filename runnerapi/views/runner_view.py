@@ -3,6 +3,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from rest_framework.decorators import action
 from runnerapi.models import Runner, Runner
 
 
@@ -19,6 +20,7 @@ class RunnerView(ViewSet):
         serializer = RunnerSerializer(runner)
         return Response(serializer.data)
 
+    @action(methods=['get'], detail=True)
     def logged_user(self, request):
         """Handle GET requests for the current runner
 
