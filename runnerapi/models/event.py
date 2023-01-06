@@ -9,3 +9,11 @@ class Event(models.Model):
     miles_to_run = models.IntegerField()
     organizer = models.ForeignKey("Runner", on_delete=models.CASCADE)
     attendees= models.ManyToManyField("Runner", through="EventAttendee", related_name='events_assisting')
+
+    @property
+    def going(self):
+        return self.__going
+
+    @going.setter
+    def going(self, value):
+        self.__going = value

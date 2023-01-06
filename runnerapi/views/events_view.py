@@ -28,7 +28,16 @@ class EventView(ViewSet):
         """
     
         event_list = Event.objects.all()
+        runner = Runner.objects.get(user=request.auth.user)
 
+
+        
+        # Set the 'going` property on every event
+        for event in event_list:
+            # This is checking for if the logged in user is in the attendees list
+            event.going = runner in event.attendees.all()
+            event.save()
+    
         serializer = EventSerializer(event_list, many=True)
         return Response(serializer.data)
             
@@ -91,7 +100,7 @@ class EventView(ViewSet):
         event.attendees.add(runner)
         return Response({'message': 'Runner added'}, status=status.HTTP_201_CREATED)
     
-    @action(methods=['DELETE'], detail=True)
+    @action(methods=['delete'], detail=True)
     def unattend(self, request, pk):
         """Post request for a user to sign up for an event"""
     
@@ -125,4 +134,4 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ('id', 'title', 'park', 'date', 'time', 
-        'pace_of_run','miles_to_run','organizer','attendees')
+        'pace_of_run','miles_to_run','organizer','going','attendees',)
