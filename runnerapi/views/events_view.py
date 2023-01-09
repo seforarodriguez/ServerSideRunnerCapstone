@@ -70,12 +70,8 @@ class EventView(ViewSet):
         """
         #
         event = Event.objects.get(pk=pk)
-        event.title = request.data["eventTitle"]
         event.date = request.data["dateOfRunEvent"]
         event.time = request.data["timeOfRunEvent"]
-        event.pace_of_run =request.data["runningPaceInMiles"]
-        event.miles_to_run=request.data["milesToRun"]
-
         event.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
