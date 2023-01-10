@@ -20,7 +20,7 @@
             "city": "Stone Mountain",
             "zipcode": "30087",
             "county": "Gwinnett",
-            "miles_available_to_run": 7,
+            "miles_available_to_run": 15,
             "difficulty": 2
         }
     },{
@@ -30,10 +30,46 @@
             "name": "South Gwinnet Park",
             "address": "2115 Mc Gee Rd SW",
             "city": "Snellville",
-            "zipcode": "30078",
+            "zipcode": "30029",
+            "county": "Gwinnett",
+            "miles_available_to_run": 5,
+            "difficulty": 4
+        }
+    },{
+        "model": "runnerapi.park",
+        "pk": 4,
+        "fields": {
+            "name": "Swanee Park",
+            "address": "2115 Mc Gee Rd SW",
+            "city": "Swanee",
+            "zipcode": "30068",
             "county": "Gwinnett",
             "miles_available_to_run": 7,
             "difficulty": 2
+        }
+    },{
+        "model": "runnerapi.park",
+        "pk": 5,
+        "fields": {
+            "name": "Duluth Park",
+            "address": "2115 Mc Gee Rd SW",
+            "city": "Duluth",
+            "zipcode": "30070",
+            "county": "Gwinnett",
+            "miles_available_to_run": 20,
+            "difficulty": 1
+        }
+    },{
+        "model": "runnerapi.park",
+        "pk": 6,
+        "fields": {
+            "name": "Norcross Park",
+            "address": "2115 Mc Gee Rd SW",
+            "city": "Norcross",
+            "zipcode": "30055",
+            "county": "Gwinnett",
+            "miles_available_to_run": 13,
+            "difficulty": 4
         }
     }
 ]
