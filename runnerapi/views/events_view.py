@@ -105,6 +105,7 @@ class EventView(ViewSet):
         event.attendees.remove(runner)
         return Response({'message': 'Runner added'}, status=status.HTTP_204_NO_CONTENT)
     
+    
 class ParkSerializer(serializers.ModelSerializer):
     """JSON serializer for event types
     """
