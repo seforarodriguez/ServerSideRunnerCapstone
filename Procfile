@@ -1,1 +1,1 @@
-web: gunicorn runnerApp.wsgi --log-file -
+web: gunicorn runnerApp.wsgi --log-file 
