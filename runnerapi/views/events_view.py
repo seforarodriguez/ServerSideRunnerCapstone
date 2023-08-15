@@ -29,8 +29,6 @@ class EventView(ViewSet):
     
         event_list = Event.objects.all()
         runner = Runner.objects.get(user=request.auth.user)
-
-
         
         # Set the 'going` property on every event
         for event in event_list:
