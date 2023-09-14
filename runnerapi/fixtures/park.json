@@ -9,7 +9,7 @@
             "zipcode": "30039",
             "county": "Gwinnett",
             "miles_available_to_run": 5,
-            "difficulty": 5
+            "difficulty": "Beginner"
         }
     },{
         "model": "runnerapi.park",
@@ -21,7 +21,7 @@
             "zipcode": "30087",
             "county": "Gwinnett",
             "miles_available_to_run": 15,
-            "difficulty": 2
+            "difficulty": "Expert"
         }
     },{
         "model": "runnerapi.park",
@@ -29,47 +29,47 @@
         "fields": {
             "name": "South Gwinnet Park",
             "address": "2115 Mc Gee Rd SW",
-            "city": "Snellville",
+            "city": "Duluth",
             "zipcode": "30029",
             "county": "Gwinnett",
             "miles_available_to_run": 5,
-            "difficulty": 4
+            "difficulty": "Beginner"
         }
     },{
         "model": "runnerapi.park",
         "pk": 4,
         "fields": {
             "name": "Swanee Park",
-            "address": "2115 Mc Gee Rd SW",
+            "address": "2115 Peachtree Industrial St",
             "city": "Swanee",
             "zipcode": "30068",
             "county": "Gwinnett",
             "miles_available_to_run": 7,
-            "difficulty": 2
+            "difficulty": "Average"
         }
     },{
         "model": "runnerapi.park",
         "pk": 5,
         "fields": {
             "name": "Duluth Park",
-            "address": "2115 Mc Gee Rd SW",
+            "address": "2115 Main Street SW",
             "city": "Duluth",
             "zipcode": "30070",
             "county": "Gwinnett",
             "miles_available_to_run": 20,
-            "difficulty": 1
+            "difficulty": "Expert"
         }
     },{
         "model": "runnerapi.park",
         "pk": 6,
         "fields": {
             "name": "Norcross Park",
-            "address": "2115 Mc Gee Rd SW",
+            "address": "2115 Mc Norcross Rd SW",
             "city": "Norcross",
             "zipcode": "30055",
             "county": "Gwinnett",
             "miles_available_to_run": 13,
-            "difficulty": 4
+            "difficulty": "Expert"
         }
     }
 ]

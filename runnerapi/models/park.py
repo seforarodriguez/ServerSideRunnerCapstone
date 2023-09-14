@@ -8,4 +8,4 @@ class Park(models.Model):
     zipcode = models.IntegerField()
     county = models.CharField(max_length=100)
     miles_available_to_run = models.IntegerField()
-    difficulty = models.IntegerField()
+    difficulty = models.CharField(max_length=100)
